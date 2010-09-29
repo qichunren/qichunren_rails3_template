@@ -2,6 +2,8 @@
 gem "authlogic",      "2.1.6"
 gem "will_paginate",  "3.0.pre2"
 gem 'friendly_id',    '~>3.0'
+gem 'acts-as-taggable-on'
+
 
 gem 'rspec-rails', '>=2.0.0.beta.22', :group => [:development, :test]
 gem 'webrat',                         :group => [:development, :test]
