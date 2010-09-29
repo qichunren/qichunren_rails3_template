@@ -1,16 +1,25 @@
-gem "will_paginate", "3.0.pre2"
-gem "authlogic", "2.1.6"
-run "rm public/index.html"
-run "rm README && touch README"
-route "root :to => \"welcome#index\""
-generate(:controller, "welcome", "index")
-run "cd app/models && wget  "
 
-if yes("Create a development database now?")
-  rake "db:create"
-  rake "db:migrate"
-end
+gem "authlogic",      "2.1.6"
+gem "will_paginate",  "3.0.pre2"
+gem 'friendly_id',    '~>3.0'
+
+gem 'rspec-rails', '>=2.0.0.beta.22', :group => [:development, :test]
+gem 'webrat',                         :group => [:development, :test]
+gem 'jquery-rails',                   :group => [:development, :test]
+
+run "bundle install"
+
+run "rm public/index.html"
+
+generate "rspec:install"
+# generate "jquery:install --ui"   # it takes too much time
+
+generate(:controller, "welcome", "index")
+
+route "root :to => \"welcome#index\"" # how to remove the route: get "welcome#index"
+
 git :init
 git :add => "."
 git :commit => "-a -m 'Initial commit'"
-run "rails s"
+
+puts "SUCCESS! Tip:rails g jquery:install --ui"
