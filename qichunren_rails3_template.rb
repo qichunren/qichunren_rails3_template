@@ -5,7 +5,7 @@ gem 'friendly_id',    '~>3.0'
 gem 'acts-as-taggable-on', '2.0.6'
 gem "rails_config",    '0.1.5'
 
-gem "mongrel",                         :group => :development
+#gem "mongrel",                         :group => :development
 gem "awesome_print", :require => 'ap', :group => :development
 
 gem 'rspec-rails', '>=2.0.0.beta.22', :group => [:development, :test]
