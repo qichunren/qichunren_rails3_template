@@ -27,7 +27,7 @@ run "curl -L http://code.jquery.com/jquery-1.4.4.min.js > public/javascripts/jqu
 run "curl -L http://github.com/rails/jquery-ujs/raw/master/src/rails.js > public/javascripts/rails.js"
 
 # get chinese 
-run "curl -L https://github.com/svenfuchs/rails-i18n/blob/master/rails/locale/zh-CN.yml > config/locales/zh-CN.yml"
+run "curl -L https://github.com/svenfuchs/rails-i18n/raw/master/rails/locale/zh-CN.yml > config/locales/zh-CN.yml"
 
 append_file '.gitignore', <<-CODE
 config/database.yml
