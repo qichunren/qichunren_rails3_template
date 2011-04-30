@@ -3,7 +3,6 @@ gem 'mysql2'
 gem "will_paginate",        "3.0.pre2"
 gem 'friendly_id',          "~>3.0"
 gem 'acts-as-taggable-on',  "2.0.6"
-gem "rails_config",         "0.2.1"
 
 gem "capistrano"
 
@@ -41,7 +40,7 @@ public/system/**
 log/
 tmp/*
 coverage/*
-CODE    
+CODE
 
 git :init
 git :add => "."
